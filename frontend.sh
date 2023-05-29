@@ -11,4 +11,4 @@ echo -e "\e33mUnzip Content\e[0m"
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 echo -e "\e33m Configure service\e[0m"
-cp frontend.conf //etc/nginx/default.d/roboshop.conf
+cp frontend.conf /etc/nginx/default.d/roboshop.conf

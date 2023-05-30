@@ -11,7 +11,7 @@ cd /app
 unzip /tmp/payment.zip
 echo -e "\e[33mStart MySQL.service\e[0m"
 cd /app
-pip3.6 install -r requirements.txt
+pip3.6 install -r requirements.txt | bash &>>/tmp/roboshop.log
 echo -e "\e[33mStart Sytemd\e[0m"
 systemctl daemon-reload
 echo -e "\e[33mStart Payment\e[0m"

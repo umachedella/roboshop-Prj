@@ -1,7 +1,7 @@
 cp catalogue.conf /etc/systemd/system/catalogue.service
 cp mongodb.repo /etc/yum.repos.d/mongo.repo
 echo -e "\e[33mDownload NodJS\e[0m"
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>/tmp/roboshop.log
 echo -e "\e[33mInstalling NodeJS\e[0m"
 yum install nodejs -y
 echo -e "\e[33m User roboshop added\e[0m"

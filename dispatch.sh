@@ -1,12 +1,12 @@
 cp dispatch.conf /etc/systemd/system/dispatch.service
 echo -e "\e[33mInstalling golang\e[0m"
-yum install golang -y
+yum install golang -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUser crated\e[0m"
 useradd roboshop
 echo -e "\e[33mDirectory crated\e[0m"
 mkdir /app
 echo -e "\e[33mDownloading content\e[0m"
-curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch.zip
+curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch.zip | bash &>>/tmp/roboshop.log
 cd /app
 echo -e "\e[33m Unzip file\e[0m"
 unzip /tmp/dispatch.zip

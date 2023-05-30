@@ -1,5 +1,5 @@
 cp payment.conf /etc/systemd/system/payment.service
-echo -e "\e[33mInstalling Pythone\e[0m"
+echo -e "\e[33mInstalling Python\e[0m"
 yum install python36 gcc python3-devel -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUser crated\e[0m"
 useradd roboshop
@@ -10,10 +10,9 @@ curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.
 cd /app
 unzip /tmp/payment.zip
 echo -e "\e[33mStart MySQL.service\e[0m"
-cd /app
 pip3.6 install -r requirements.txt | bash &>>/tmp/roboshop.log
-echo -e "\e[33mStart Sytemd\e[0m"
+echo -e "\e[33m Reload Sytemd\e[0m"
 systemctl daemon-reload
-echo -e "\e[33mStart Payment\e[0m"
+echo -e "\e[33mStart Payment Service\e[0m"
 systemctl enable payment
 systemctl start payment

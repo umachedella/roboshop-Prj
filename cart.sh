@@ -14,3 +14,8 @@ unzip /tmp/cart.zip
 cd /app
 echo -e "\e[33m Installing Dependencies\e[0m"
 npm install | bash &>>/tmp/roboshop.log
+echo -e "\e[33m Systemd reload\e[0m"
+systemctl daemon-reload
+echo -e "\e[33m Start user\e[0m"
+systemctl enable cart
+systemctl start cart

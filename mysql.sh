@@ -8,5 +8,5 @@ systemctl enable mysqld
 systemctl start mysqld
 echo -e "\e[33mSet Password\e[0m"
 mysql_secure_installation --set-root-pass RoboShop@1
-echo -e "\e[33mUser Created\e[0m"
+echo -e "\e[33mU ser Created\e[0m"
 mysql -uroot -pRoboShop@1

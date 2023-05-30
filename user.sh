@@ -19,7 +19,7 @@ systemctl daemon-reload
 echo -e "\e[33mStart user\e[0m"
 systemctl enable user
 systemctl start user
-echo -e "\e[33mInstallong MongoDB\e[0m"
+echo -e "\e[3333mInstalling MongoDB\e[0m"
 yum install mongodb-org-shell -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mShSchema Loaded\e[0m"
 mongo --host mongodb-dev.umamd.store </app/schema/user.js

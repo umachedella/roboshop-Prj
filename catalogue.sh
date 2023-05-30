@@ -21,7 +21,7 @@ systemctl daemon-reload
 echo -e "\e[33mStart Catalouge\e[0m"
 systemctl enable catalogue
 echo -e "\e[33mShSchema Loaded\e[0m"
-mongo --host 172.31.1.123 </app/schema/catalogue.js
+mongo --host mongodb-dev.umamd.store </app/schema/catalogue.js
 echo -e "\e[Reload daemon service\e[0m"
 systemctl daemon-reload
 systemctl restart catalogue

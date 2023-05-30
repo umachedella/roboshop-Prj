@@ -11,7 +11,6 @@ cd /app
 echo -e "\e[33m Unzip file\e[0m"
 unzip /tmp/dispatch.zip
 echo -e "\e[33m download the dependencies & build the software\e[0m"
-cd /app
 go mod init dispatch
 go get
 go build

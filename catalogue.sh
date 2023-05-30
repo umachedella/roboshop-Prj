@@ -13,13 +13,11 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 echo -e "\e[33mUnzip File\e[0m"
 cd /app
 unzip /tmp/catalogue.zip
-echo -e "\e[33mInstalling NPM\e[0m"
+echo -e "\e[33mInstalling dependencies\e[0m"
 cd /app
 npm install | bash &>>/tmp/roboshop.log
-echo -e "\e[Reload daemon service\e[0m"
-systemctl daemon-reload
-echo -e "\e[33mStart Catalouge\e[0m"
-systemctl enable catalogue
+echo -e "\e[33mInstalling MongoDB\e[0m"
+yum install mongodb-org-shell -y
 echo -e "\e[33mShSchema Loaded\e[0m"
 mongo --host mongodb-dev.umamd.store </app/schema/catalogue.js
 echo -e "\e[Reload daemon service\e[0m"

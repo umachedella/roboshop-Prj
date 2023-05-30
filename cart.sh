@@ -11,7 +11,6 @@ echo -e "\e[33m Unzip File\e[0m"
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip
 cd /app
 unzip /tmp/cart.zip
-cd /app
 echo -e "\e[33m Installing Dependencies\e[0m"
 npm install | bash &>>/tmp/roboshop.log
 echo -e "\e[33m Systemd reload\e[0m"

@@ -9,6 +9,7 @@ echo -e "\e[33m Unzip File\e[0m"
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip | bash &>>/tmp/roboshop.log
 cd /app
 unzip /tmp/shipping.zip
+echo -e "\e[33m download the dependencies & build the application\e[0m"
 mvn clean package
 mv target/shipping-1.0.jar shipping.jar
 echo -e "\e[33m Systemd reload\e[0m"

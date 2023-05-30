@@ -3,7 +3,7 @@ cp mysql.conf /etc/yum.repos.d/mysql.repo
 yum module disable mysql -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mDownloading MySQL\e[0m"
 yum install mysql-community-server -y | bash &>>/tmp/roboshop.log
-echo -e "\e[33mStart MySQL\e[0m"
+echo -e "\e[33mStart MySQL.service\e[0m"
 systemctl enable mysqld
 systemctl start mysqld
 echo -e "\e[33mSet Password\e[0m"

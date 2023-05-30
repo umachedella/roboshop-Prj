@@ -1,6 +1,7 @@
 cp shipping.conf /etc/systemd/system/shipping.service
 echo -e "\e[33m Installing Maven\e[0m"
-yum install maven -y | bash &>>/tmp/roboshop.log
+yum install maven -y
+#yum install maven -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUser created\e[0m"
 useradd roboshop
 echo -e "\e[33mCreated directory\e[0m"

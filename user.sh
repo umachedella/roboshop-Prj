@@ -1,7 +1,7 @@
 cp user.conf /etc/systemd/system/user.service
 cp mongodb.repo /etc/yum.repos.d/mongo.repo
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>/tmp/roboshop.log
-echo -e "\e[33mInstallong NodeJS\e[0m"
+echo -e "\e[333333mInstalling NodeJS\e[0m"
 yum install nodejs -y | bash &>>/tmp/roboshop.log | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUser created\e[0m"
 useradd roboshop

@@ -14,7 +14,7 @@ mv target/shipping-1.0.jar shipping.jar
 echo -e "\e[33m Systemd reload\e[0m"
 systemctl daemon-reload
 echo -e "\e[33mInstalling mysql\e[0m"
-yum install mysql -y
+yum install mysql -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33m Start shipping\e[0m"
 systemctl enable shipping
 systemctl restart shipping

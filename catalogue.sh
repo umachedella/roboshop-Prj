@@ -14,7 +14,6 @@ echo -e "\e[33mUnzip File\e[0m"
 cd /app
 unzip /tmp/catalogue.zip
 echo -e "\e[33mInstalling dependencies\e[0m"
-cd /app
 npm install | bash &>>/tmp/roboshop.log
 echo -e "\e[33mInstalling MongoDB\e[0m"
 yum install mongodb-org-shell -y

@@ -1,5 +1,5 @@
 cp shipping.conf /etc/systemd/system/shipping.service
-echo -e "\e[333333mInstalling NodeJS\e[0m"
+echo -e "\e[33m Installing Maven\e[0m"
 yum install maven -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUser created\e[0m"
 useradd roboshop
@@ -9,7 +9,6 @@ echo -e "\e[33m Unzip File\e[0m"
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip | bash &>>/tmp/roboshop.log
 cd /app
 unzip /tmp/shipping.zip
-cd /app
 mvn clean package
 mv target/shipping-1.0.jar shipping.jar
 echo -e "\e[33m Systemd reload\e[0m"

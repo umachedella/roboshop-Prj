@@ -9,13 +9,13 @@ useradd roboshop
 echo -e "\e[33mCreated directory app\e[0m"
 mkdir /app
 echo -e "\e[33mDownloaded catalouge\e[0m"
-curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
+curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUnzip File\e[0m"
 cd /app
 unzip /tmp/catalogue.zip
 echo -e "\e[33mInstalling NPM\e[0m"
 cd /app
-npm install
+npm install | bash &>>/tmp/roboshop.log
 echo -e "\e[Reload daemon service\e[0m"
 systemctl daemon-reload
 echo -e "\e[33mStart Catalouge\e[0m"

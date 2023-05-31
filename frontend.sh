@@ -4,7 +4,7 @@ yum install nginx -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mStart Ngnix server\e[0m"
 systemctl enable nginx
 systemctl start nginx
-echo -e "\e[33mRemove Files\e[0m"
+echo -e "\e[33m Remove Files\e[0m"
 rm -rf /usr/share/nginx/html/*
 echo -e "\e[33mDownload Content\e[0m"
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip | bash &>>/tmp/roboshop.log

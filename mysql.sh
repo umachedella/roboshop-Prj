@@ -2,7 +2,8 @@ cp mysql.conf /etc/yum.repos.d/mysql.repo
 echo -e "\e[33m Disable MySQL 8 version\e[0m"
 yum module disable mysql -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mDownloading MySQL\e[0m"
-yum install mysql-community-server -y | bash &>>/tmp/roboshop.log
+yum install mysql-community-server -y
+#| bash &>>/tmp/roboshop.log
 echo -e "\e[33mStart MySQL.service\e[0m"
 systemctl enable mysqld
 systemctl start mysqld

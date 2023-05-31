@@ -1,4 +1,4 @@
-cp shipping.conf /etc/systemd/system/shipping.service
+cp /root/roboshop-Prj/shipping.conf /etc/systemd/system/shipping.service
 echo -e "\e[33m Installing Maven\e[0m"
 yum install maven -y
 #yum install maven -y | bash &>>/tmp/roboshop.log

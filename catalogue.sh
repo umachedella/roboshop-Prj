@@ -1,5 +1,5 @@
-cp catalogue.conf /etc/systemd/system/catalogue.service
-cp mongodb.repo /etc/yum.repos.d/mongo.repo
+cp /root/roboshop-Prj/catalogue.conf /etc/systemd/system/catalogue.service
+cp /root/roboshop-Prj/mongodb.repo /etc/yum.repos.d/mongo.repo
 echo -e "\e[33mDownload NodJS\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>/tmp/roboshop.log
 echo -e "\e[33mInstalling NodeJS\e[0m"

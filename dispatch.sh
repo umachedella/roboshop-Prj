@@ -14,8 +14,7 @@ echo -e "\e[33m download the dependencies & build the software\e[0m"
 go mod init dispatch
 go get
 go build
-echo -e "\e[33m Start dispatch\e[0m"
+echo -e "\e[33m Start dispatch service\e[0m"
 systemctl daemon-reload
-echo -e "\e[33m Start service\e[0m"
 systemctl enable dispatch
-systemctl start dispatch
+systemctl restart dispatch

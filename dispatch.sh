@@ -1,4 +1,4 @@
-cp dispatch.conf /etc/systemd/system/dispatch.service
+cp /root/roboshop-Prj/dispatch.conf /etc/systemd/system/dispatch.service
 echo -e "\e[33mInstalling golang\e[0m"
 yum install golang -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUser crated\e[0m"

@@ -1,6 +1,6 @@
 #cp /root/Roboshop-Prj/frontend.conf /etc/nginx/default.d/roboshop.conf
 echo -e "\e[33mInstalling NGNIX server\e[0m"
-yum install nginx -y | bash &>>/tmp/roboshop.log
+yum install nginx -y | bash & >>/tmp/roboshop.log
 echo -e "\e[33mStart Ngnix server\e[0m"
 systemctl enable nginx
 systemctl start nginx

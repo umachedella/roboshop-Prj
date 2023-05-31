@@ -8,14 +8,14 @@ echo -e "\e[33mUser created\e[0m"
 useradd roboshop
 echo -e "\e[33mCreated directory\e[0m"
 mkdir /app
-echo -e "\e[33m Unzip NodeJS\e[0m"
+echo -e "\e[33mUnzip NodeJS\e[0m"
 curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip | bash &>>/tmp/roboshop.log
 cd /app
 unzip /tmp/user.zip
-echo -e "\e[33m Installing dependencies\e[0m"
+echo -e "\e[33mInstalling dependencies\e[0m"
 npm install | bash &>>/tmp/roboshop.log
-echo -e "\e[33m Systemd reload\e[0m"
-echo -e "\e[3333mInstalling MongoDB\e[0m"
+echo -e "\e[33mSystemd reload\e[0m"
+echo -e "\e[33mInstalling MongoDB\e[0m"
 yum install mongodb-org-shell -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mShSchema Loaded\e[0m"
 mongo --host mongodb-dev.umamd.store </app/schema/user.js

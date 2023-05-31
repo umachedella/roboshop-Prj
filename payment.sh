@@ -1,7 +1,6 @@
 cp /root/roboshop-Prj/payment.conf /etc/systemd/system/payment.service
 echo -e "\e[33mInstalling Python\e[0m"
 yum install python36 gcc python3-devel -y
-#yum install python36 gcc python3-devel -y | bash &>>/tmp/roboshop.log
 echo -e "\e[33mUser crated\e[0m"
 useradd roboshop
 echo -e "\e[33mDirectory created\e[0m"
